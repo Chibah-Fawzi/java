@@ -57,9 +57,12 @@ public class MortgageV2 {
                 ((Math.pow(1 + monthly_interests, payments_number) - Math.pow(1 + monthly_interests, pm)))) /
                 (Math.pow(1 + monthly_interests, payments_number) - 1);
 
+        return printMortgage(pm, balance);
+    }
+
+    private static double printMortgage(int pm, double balance) {
         System.out.println("PAYMENT SCHEDULE");
         System.out.println("----------------");
-        System.out.println(pm);
         for (short month = 1; month < pm; month++) {
             System.out.println(month + " - " + NumberFormat.getCurrencyInstance(Locale.US).format(balance));
         }

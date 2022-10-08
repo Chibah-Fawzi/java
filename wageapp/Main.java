@@ -1,18 +1,15 @@
 package wageapp;
 
-// PROCEDURAL PROGRAMMING ==> OOP
+// ENCAPSULATION
 
 public class Main {
     public static void main(String[] args) {
-        int baseSalary = 50000;
-        int extraHours = 10;
-        int hourlyRate = 20;
 
-        int wage = calculateWage(baseSalary, extraHours, hourlyRate);
-        System.out.println(wage);
+        var employee = new Employee(5000, 20);
+
+        int wage = employee.calculateWage(10);
+
+        System.out.println("wage : " + wage);
     }
 
-    public static int calculateWage(int baseSalary, int extraHours, int hourlyRate) {
-        return baseSalary + (extraHours * hourlyRate);
-    }
 }
