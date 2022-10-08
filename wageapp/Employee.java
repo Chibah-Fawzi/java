@@ -6,16 +6,22 @@ public class Employee {
     private int baseSalary;
     private int hourlyRate;
 
-    // CONSTRUCTOR
+    public static int numberOfEmployees;
 
+    // CONSTRUCTOR
     public Employee(int baseSalary, int hourlyRate) {
         setBaseSalary(baseSalary);
         setHourlyRate(hourlyRate);
+        numberOfEmployees++;
+    }
+
+    public static void displayNumberOfEmployees() {
+        System.out.println(numberOfEmployees);
     }
 
     // METHOD OVERLOADING
     // --------------------------------------
-    // if there's extrahours execute this
+    // if there's extra hours execute this
     public int calculateWage(int extraHours) {
         return baseSalary + (hourlyRate * extraHours);
     }
