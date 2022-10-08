@@ -13,9 +13,20 @@ public class Employee {
         setHourlyRate(hourlyRate);
     }
 
+    // METHOD OVERLOADING
+    // --------------------------------------
+    // if there's extrahours execute this
     public int calculateWage(int extraHours) {
         return baseSalary + (hourlyRate * extraHours);
     }
+
+    // else execute this
+    public int calculateWage() {
+        // return baseSalary;
+        // OR
+        return calculateWage(0);
+    }
+    // --------------------------------------
 
     private void setBaseSalary(int baseSalary) {
         if (baseSalary <= 0) {

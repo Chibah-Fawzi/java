@@ -7,7 +7,7 @@ public class Main {
 
         var employee = new Employee(5000, 20);
 
-        int wage = employee.calculateWage(10);
+        int wage = employee.calculateWage();
 
         System.out.println("wage : " + wage);
     }
